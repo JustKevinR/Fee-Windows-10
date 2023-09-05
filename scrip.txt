@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+echo ' '
+echo "Adding universe repository"
+echo ' '
+
+sudo add-add-repository universe
+
+echo ' '
+echo "Updating system"
+echo ' '
+
+sudo apt update -y
+sudo apt upgrade -y
+
+echo ' '
+echo "Setting up desktop environment"
+echo ' '
+
+sudo apt install cinnamon-desktop-environment -y
+
+
+echo ' '
+echo "Setting up theme"
+echo ' '
+
+
+cd ~
+
+mkdir .themes
+cd .themes
+sudo apt install git
+git clone https://github.com/B00merang-Project/Windows-10.git
+
+
+echo ' '
+echo "Setting up icons"
+echo ' '
+
+cd ~
+mkdir .icons
+cd .icons
+git clone https://github.com/B00merang-Artwork/Windows-10.git
+
+echo ' '
+echo "All done!"
+echo ' '
+echo ' '
+echo "Now logout and sellect Cinnamon"
+echo ' '
